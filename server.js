@@ -11,19 +11,20 @@ const server = createServer((request, response) => {
         
     }else if(method === 'POST' && url === '/receitas') {
         
-    }else if(method === 'GET' && url.startWith('/receitas/')) {
+    }else if(method === 'GET' && url.startsWith('/receitas/')) {
         
-    }else if(method === 'PUT' && url.startWith('/receitas/')) {
+    }else if(method === 'PUT' && url.startsWith('/receitas/')) {
         
-    }else if(method === 'DELETE' && url.startWith('/receitas/')) {
+    }else if(method === 'DELETE' && url.startsWith('/receitas/')) {
         
-    }else if(method === 'GET' && url.startWith('/categorias/')) {
+    }else if(method === 'GET' && url.startsWith('/categorias/')) {
         
-    }else if(method === 'GET' && url.startWith('//busca/')) {
+    }else if(method === 'GET' && url.startsWith('//busca/')) {
         
-    }else if(method === 'GET' && url.startWith('/ingredientes/')) {
+    }else if(method === 'GET' && url.startsWith('/ingredientes/')) {
         
     }else{
+    
         response.writeHead(404, {'Content-Type' : 'application/json'})
         response.end(JSON.stringify({message: 'Página não encontrada'}))
     }
