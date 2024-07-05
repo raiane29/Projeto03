@@ -1,7 +1,7 @@
 import fs from 'node:fs'
 
 const lerDadosReceita = (callback) => {
-    fs.readFile('resceitas.json', "utf-8", (err, data)=>{
+    fs.readFile('receitas.json', "utf-8", (err, data)=>{
         if (err) {
             callback(err)
         }
